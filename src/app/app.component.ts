@@ -17,14 +17,14 @@ export class AppComponent {
       'Mail-id':this.fb.control('',[Validators.required,Validators.maxLength(250),Validators.minLength(10),(Validators.pattern('[a-z0-9.@]*'))]),
       'Date-of-Birth':this.fb.control(''),
       'age' : this.fb.control('',[Validators.required,Validators.min(18),Validators.max(55)]),
-      'Gender':this.fb.control('',Validators.required),
+      'Gender':this.fb.control(''),
       'Marital Status':this.fb.control(''),
       'FavFood':this.fb.control(''),
 
       'country' : this.fb.control('IN'),
       'address' : this.fb.array([
         this.fb.group({
-          'streetname' : this.fb.control('',[Validators.required]),
+          'streetname' : this.fb.control(''),
           'Doorno':this.fb.control(''),
           'zipcode' : this.fb.control('')
         })
